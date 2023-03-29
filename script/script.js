@@ -1,3 +1,6 @@
-const result = document.getElementById("result");
+const result = document.getElementById('result');
 
-result.innterText = "hi";
+function changeValue()
+{
+  result.innterText = "hi";
+}
