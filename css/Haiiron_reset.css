@@ -47,14 +47,6 @@ table
 	border-spacing: 0;
 }
 
-/*경운대 카풀 서비스 모바일 최적화 css reset*/
-
-h1
-{
-	margin: 10%;
-	font-size:8vw;
-}
-
 img
 {
 	max-width:100%;
@@ -80,17 +72,6 @@ input[type=number]
 	display: flex;
 }
 
-
-.Contents
-{
-background-color: khaki;
-margin:auto;
-width: 90%;
-height: 1200px;
-border-radius: 25px 25px 10px 10px;
-}
 /* 칸막이 */
 .interval
-{
-	height: 80px;
-}
+{height: 80px;}
