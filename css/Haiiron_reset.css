@@ -2,7 +2,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
-   20200906 ~ Haiiron // 전현배
+   20200906 ~ Haiiron // 전현배 https://github.com/HarryKito
 */
 
 html, body, div, span, applet, object, iframe,
@@ -27,11 +27,18 @@ time, mark, audio, video
 	text-decoration:none;
 	font-family:sans-serif;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section
 {display: block;}
 
+* {
+	box-sizing:border-box;
+	justify-content: center;
+}
+
+/* 전체 화면을 다 씁시다. */
 body
 {
 	background-image: url('../images/bg.jpg'); /* 소스출처 https://pixabay.com/photos/vanlife-van-box-car-camper-5130072/ */
@@ -39,39 +46,77 @@ body
 	background-attachment: fixed;
 	background-size: cover;
 	line-height: 1;
+	height: 100%;
+	width: 100%;
 }
-
-table
+/* Header 구성 <<Navigation 포함>> */
+header
 {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-img
-{
-	max-width:100%;
-	height:auto;
-}
-
-input[type=number]
-{
-	width: 45%;
-	margin:5%;
-	height: 70px;
-	font-size:20px;
-	background-color: #DAF7A6;
-}
-
-*
-{box-sizing:border-box;}
-
-.header
-{
-	vertical-align: baseline;
-	background-color: rgba(146, 168, 209,.7);
 	display: flex;
+	height: 10%;
 }
 
-/* 칸막이 */
-.interval
-{height: 80px;}
+.header_Title
+{ width: 30%; }
+.header_nav
+{ width: 40%; }
+.header_activate
+{ width: 30%; }
+/* --------- Header 구성 --------- */
+
+.menu-bar {
+	align-content: center;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+/*.video {*/
+/*	width: 200px;*/
+/*	height: 150px;*/
+/*}*/
+h1 {
+	color: black;
+	text-align: left;
+	padding-left: 20px;
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li a:hover:not(.active) {
+  color: mediumpurple;
+}
+
+li {
+	width: 25%;
+}
+
+li a {
+  	display: block;
+  	color: #18A0FB;
+  	text-align: center;
+  	padding: 20px 16px;
+  	text-decoration: none;
+}
+
+.MAIN {
+	display: flex;
+	height: 80%;
+	width: 100%;
+}
+
+.MAIN div {
+    width: 50%;
+    align-content: center;
+}
+
+footer {
+	height: 10%;
+}
+

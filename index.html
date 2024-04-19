@@ -11,18 +11,35 @@
   <meta property="og:description" content="for haiiron's future">
   
   
-  <link rel="stylesheet" type="text/css" href="./css/Haiiron_reset.css"/>
-  <script type="text/javascript" src="./script/script.js"></script>
-
+	<link rel="stylesheet" type="text/css" href="./css/Haiiron_reset.css"/>
+	<script type="text/javascript" src="./script/script.js"></script>
+	<script src="./script/script.js"></script>
   <title>Haiiron Profile</title>
 </head>
 <body>
-  <header>
-	<h1 Haiiron web page! </h1>
-  </header>
-	
-  <section class="">
-	  
-  </section>
+	<header data-include-path="./layout/nav_header.html"></header>
+	<h1>contents</h1>
+	<footer data-include-path="./layout/footer.html"></footer>
+	<script>
+        window.addEventListener('load', function()
+		{
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function(el)
+			{
+                var includePath = el.dataset.includePath;
+                if (includePath)
+				{
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function ()
+					{
+                        if (this.readyState == 4 && this.status == 200)
+                            el.outerHTML = this.responseText;
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
