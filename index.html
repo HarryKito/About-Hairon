@@ -1,45 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <meta name="author" content="(Haiiron)">
+	<meta name="author" content="(Haiiron)">
 
 	<meta property="og:title" content="Haiiron's Home">
-  <meta property="og:description" content="for haiiron's future">
-  
-  
+	<meta property="og:description" content="for haiiron's future">
+
 	<link rel="stylesheet" type="text/css" href="./css/Haiiron_reset.css"/>
 	<script type="text/javascript" src="./script/script.js"></script>
 	<script src="./script/script.js"></script>
-  <title>Haiiron Profile</title>
+	<title>Haiiron Profile</title>
 </head>
 <body>
 	<header data-include-path="./layout/nav_header.html"></header>
-	<h1>contents</h1>
+	<h1>My main contents here...</h1>
+	<p>What should I do..!?</p>
 	<footer data-include-path="./layout/footer.html"></footer>
-	<script>
-        window.addEventListener('load', function()
-		{
-            var allElements = document.getElementsByTagName('*');
-            Array.prototype.forEach.call(allElements, function(el)
-			{
-                var includePath = el.dataset.includePath;
-                if (includePath)
-				{
-                    var xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function ()
-					{
-                        if (this.readyState == 4 && this.status == 200)
-                            el.outerHTML = this.responseText;
-                    };
-                    xhttp.open('GET', includePath, true);
-                    xhttp.send();
-                }
-            });
-        });
-    </script>
 </body>
 </html>

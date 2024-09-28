@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.A4 {
+    background-color: white;
+    width: 210mm;
+    height: 297mm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.intro {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: black;
+}
+
+@media print {
+    body {
+        background: none;
+    }
+    .container {
+        background-color: white;
+        margin: auto;
+    }
+}
