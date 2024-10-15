@@ -1,6 +1,6 @@
-# Haiiron
+# Hairon
 
-## https://harrykito.github.io/About-Haiiron/
+## https://harrykito.github.io/About-Hairon/
 <!-- ## https://harrykito.github.io/Haiiron_WebPage/-->
 
 #### W3C HTML Validator page
