@@ -10,7 +10,7 @@
     <div id="markdown-content">Loading Markdown...</div>
 
     <script>
-        const markdownFilePath = 'test.md';
+        const markdownFilePath = './test.md';
 
         // Load Markdown file
         fetch(markdownFilePath)
@@ -21,7 +21,7 @@
             })
             .catch(error => {
                 console.error('Error loading Markdown file:', error);
-                document.getElementById('markdown-content').innerText = 'Failed to load Markdown.';
+                document.getElementById('markdown-content').innerText = 'Failed to load Markdown.\n'+ error;
             });
     </script>
 </body>
