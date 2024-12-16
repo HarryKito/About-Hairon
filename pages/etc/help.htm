@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Render Markdown File</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div id="markdown-content">Loading Markdown...</div>
+
+    <script>
+        const markdownFilePath = 'test.md';
+
+        // Load Markdown file
+        fetch(markdownFilePath)
+            .then(response => response.text())
+            .then(markdown => {
+                const htmlContent = marked(markdown);
+                document.getElementById('markdown-content').innerHTML = htmlContent;
+            })
+            .catch(error => {
+                console.error('Error loading Markdown file:', error);
+                document.getElementById('markdown-content').innerText = 'Failed to load Markdown.';
+            });
+    </script>
+</body>
+</html>
