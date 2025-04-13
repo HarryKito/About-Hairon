@@ -1,0 +1,3 @@
+[submodule "pages/etc/ky_bus"]
+	path = pages/etc/ky_bus
+	url = https://github.com/HarryKito/ky_bus.git
