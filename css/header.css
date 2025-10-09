@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 80px;
+}
+
+.header_Title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header_Title h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+.header_nav {
+  display: flex;
+  align-items: center;
+}
+
+.header_nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 60px;
+  white-space: nowrap; /* 줄바꿈 방지... */
+}
+
+.header_nav a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 18px;
+  transition: color 0.3s;
+}
