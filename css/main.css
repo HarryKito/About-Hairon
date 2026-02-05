@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
 body {
-  background: #1a1a1a;
-  color: #e0e0e0;
+  color: var(--text);
 }
 
 .section_container {
@@ -18,7 +17,7 @@ section {
 section h2 {
   font-size: 36px;
   margin-bottom: 50px;
-  color: #ffffff;
+  color: var(--text);
 }
 
 /* Mobile */

@@ -1,0 +1,8 @@
+Applied mapping (user choice 3 - Custom Table):
+- Hero => Elegance (Silver #C0C0C0 + Deep Rose #704241)
+- Featured Projects => Minimal (White #FFFFFF + Light Gray #E5E5E5)
+- Footer => Cozy (Beige #F5F5DC + Saddle Brown #8B4513)
+
+Quick checks:
+- Use `--text-dark: #333333` for readable body text on bright backgrounds.
+- Buttons/links in each section use section-specific accent where sensible.

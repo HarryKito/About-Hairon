@@ -36,9 +36,44 @@ footer, header, hgroup, menu, nav, section
 	box-sizing: border-box;
 }
 
+:root {
+	/* Snow Pink (Base) + suggested harmonious combinations */
+	--snow-pink: #fff4f6; /* Snow Pink / Blush White (base) */
+	--cherry-blossom: #FFD1DC; /* tone-on-tone */
+	--baby-pink: #F4C2C2; /* tone-on-tone */
+	--dusty-rose: #D8A7B1; /* tone-on-tone */
+	--mint-white: #E0F2F1; /* natural */
+	--sage-green: #9DC183; /* natural */
+	--ash-gray: #B2BEB5; /* natural */
+
+	--bg-gradient: linear-gradient(135deg, var(--snow-pink) 0%, var(--mint-white) 60%, #fffafc 100%);
+	--surface: #fff9f9; /* very light neutral with tiny warmth */
+
+	/* Custom table palettes (Minimal / Cozy / Elegance) */
+	--minimal-bg: #FFFFFF;        /* Pure White */
+	--minimal-surface: #E5E5E5;   /* Light Gray */
+
+	--cozy-bg: #F5F5DC;           /* Beige */
+	--cozy-accent: #8B4513;       /* Saddle Brown */
+
+	--elegant-bg: #C0C0C0;        /* Silver */
+	--elegant-accent: #704241;    /* Deep Rose */
+
+	/* Readability */
+	--text-dark: #333333;
+	--card-bg: #ffffff; /* card background */
+	--text: #102027; /* readable dark text */
+	--muted: var(--ash-gray); /* softer muted color */
+	/* Primary accent moved to sage to reduce pink dominance */
+	--accent: var(--sage-green);
+	--accent-rose: var(--dusty-rose); /* keep rose as secondary */
+	--accent-dark: #7aa36b; /* darker sage for hover */
+	--border: #eef5f2; /* very pale greenish border */
+}
+
 body {
-	background: #1a1a1a;
-	color: #e0e0e0;
+	background: var(--bg-gradient);
+	color: var(--text);
 	line-height: 1.6;
 	width: 100%;
 }
@@ -48,19 +83,19 @@ header {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: #ffffff;
+	color: var(--text);
 	font-weight: 600;
 	margin: 1em 0 0.5em 0;
 }
 
 a {
-	color: #18A0FB;
+	color: var(--accent);
 	text-decoration: none;
 	transition: color 0.3s ease;
 }
 
 a:hover {
-	color: #0d7dd4;
+	color: var(--accent-dark);
 }
 
 ul {
