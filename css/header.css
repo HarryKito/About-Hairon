@@ -1,9 +1,15 @@
 @charset "UTF-8";
 
 header {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 80px;
+  padding: 16px 80px;
+  background: #2a2a2a;
+  border-bottom: 1px solid #444;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header_Title {
@@ -12,9 +18,24 @@ header {
   gap: 15px;
 }
 
+.header_profile_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #18A0FB;
+}
+
 .header_Title h1 {
-  font-size: 28px;
-  color: #000;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header_Title a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .header_nav {
@@ -27,13 +48,57 @@ header {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 60px;
-  white-space: nowrap; /* 줄바꿈 방지... */
+  gap: 40px;
+  white-space: nowrap;
 }
 
-.header_nav a {
+.header_nav li a {
   text-decoration: none;
-  color: #007bff;
-  font-size: 18px;
-  transition: color 0.3s;
+  color: #e0e0e0;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.header_nav li a:hover {
+  color: #18A0FB;
+}
+
+.resume_btn,
+.header_nav li a.resume_btn {
+  background: #18A0FB;
+  color: #ffffff !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.resume_btn:hover,
+.header_nav li a.resume_btn:hover {
+  background: #0d7dd4;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  .header_profile_img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header_Title h1 {
+    font-size: 18px;
+  }
+
+  .header_nav ul {
+    gap: 20px;
+  }
+
+  .header_nav li a {
+    font-size: 14px;
+  }
 }

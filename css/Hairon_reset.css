@@ -22,10 +22,9 @@ time, mark, audio, video
 	border: 0;
 	font-size: 100%;
 	line-height:150%;
-	text-align: center;
 	list-style:none;
 	text-decoration:none;
-	font-family:sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -34,70 +33,41 @@ footer, header, hgroup, menu, nav, section
 {display: block;}
 
 * {
-	box-sizing:border-box;
-	justify-content: center;
+	box-sizing: border-box;
 }
 
-body
-{
-	background: linear-gradient(135deg, #ffd3d3, #b1d7fd);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	justify-content: center;
-	align-items: center;
-	line-height: 1;
-	height: 100vh;
+body {
+	background: #1a1a1a;
+	color: #e0e0e0;
+	line-height: 1.6;
 	width: 100%;
 }
 
-/* Header 구성 <<Navigation 포함>> */
-header
-{
+header {
 	display: flex;
-	height: 10%;
 }
 
-.header_Title
-{ width: 30%; }
-.header_nav
-{ width: 40%; }
-.header_activate
-{ width: 30%; }
-/* --------- Header 구성 --------- */
-
-.menu-bar {
-	align-content: center;
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
+h1, h2, h3, h4, h5, h6 {
+	color: #ffffff;
+	font-weight: 600;
+	margin: 1em 0 0.5em 0;
 }
 
-h1 {
-	color: black;
-	text-align: left;
-	padding-left: 20px;
+a {
+	color: #18A0FB;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+a:hover {
+	color: #0d7dd4;
 }
 
 ul {
 	list-style-type: none;
-	display: flex;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
 }
-
-li a:hover:not(.active) {
-  color: mediumpurple;
-}
-
-li {
-	width: 25%;
-}
-
-li a {
-  	display: block;
-  	color: #18A0FB;
   	text-align: center;
   	padding: 20px 16px;
   	text-decoration: none;
