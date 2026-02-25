@@ -1,4 +1,6 @@
 window.addEventListener('load', function() {
+    // detect mobile and add class to <body>
+    detectMobile();
     var allElements = document.getElementsByTagName('*');
     Array.prototype.forEach.call(allElements, function(el) {
         var includePath = el.dataset.includePath;
@@ -13,6 +15,32 @@ window.addEventListener('load', function() {
         }
     });
 });
+
+// Mobile detection: add `is-mobile` class to body for CSS/JS optimizations
+function detectMobile() {
+    try {
+        var isSmall = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+        var hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        var ua = navigator.userAgent || '';
+        var isMobileUA = /Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(ua);
+        var mobile = isSmall || hasTouch || isMobileUA;
+        if (mobile) document.body.classList.add('is-mobile');
+        else document.body.classList.remove('is-mobile');
+    } catch (e) {
+        console.error('detectMobile error', e);
+    }
+}
+
+// debounce helper for resize
+function debounce(fn, wait) {
+    var t;
+    return function() {
+        clearTimeout(t);
+        t = setTimeout(function() { fn(); }, wait);
+    };
+}
+
+window.addEventListener('resize', debounce(detectMobile, 150));
 
 // Copy email to clipboard
 function copyEmail() {

@@ -25,8 +25,9 @@
 }
 
 .hero_content p {
-  font-size: 18px;
-  color: var(--muted);
+  font-size: 20px;
+  color: var(--text);
+  font-weight: 500;
   line-height: 1.6;
 }
 
@@ -324,6 +325,8 @@
 
   .projects_grid {
     grid-template-columns: 1fr;
+    padding: 0 8px; /* reduce horizontal padding for small screens */
+    gap: 16px;
   }
 
   .project_image {
@@ -359,5 +362,113 @@
   .social_icon svg {
     width: 20px;
     height: 20px;
+  }
+
+  /* Project nav buttons: keep them inside the viewport on small screens */
+  .proj_nav {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    top: auto;
+    bottom: 12px;
+    transform: none;
+    background: rgba(16,20,25,0.85);
+  }
+
+  .proj_nav.left { left: 12px; }
+  .proj_nav.right { right: 12px; }
+
+  /* Make project cards slightly narrower to improve scrolling on small screens */
+  .project_link {
+    flex: 0 0 280px;
+  }
+
+  /* Slightly larger tappable copy button */
+  .copy_btn {
+    padding: 10px 18px;
+    font-size: 15px;
+  }
+}
+
+/* Styles applied when JS detects a mobile device (body.is-mobile) */
+body.is-mobile {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.is-mobile .project_card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+body.is-mobile .project_link {
+  flex: 0 0 88% !important; /* make cards wider for easier tapping */
+}
+
+body.is-mobile .proj_nav {
+  /* ensure nav buttons are visible and easy to tap */
+  width: 48px;
+  height: 48px;
+  font-size: 22px;
+  bottom: 12px;
+  background: rgba(0,0,0,0.6);
+}
+
+body.is-mobile .hero_image img,
+body.is-mobile .project_image img,
+body.is-mobile .blog_image img {
+  -webkit-user-drag: none;
+  max-height: 420px;
+  height: auto;
+}
+
+/* Increase tap targets for header nav on mobile detection */
+body.is-mobile .header_nav li a {
+  padding: 10px 8px;
+  display: inline-block;
+}
+
+/* Diagonal split for two overlapping images (equal-area split via center-line) */
+.project_image.diag-split {
+  position: relative;
+  overflow: hidden;
+}
+
+.project_image.diag-split img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Split along a line through the center at ~20deg so each side has equal area.
+   Intersections with left/right edges are approximately at 31.8% and 68.2%. */
+.project_image.diag-split img:first-child {
+  clip-path: polygon(0 0, 100% 0, 100% 68.2%, 0 31.8%);
+  z-index: 2;
+  object-position: 50% 20%; /* show important area */
+}
+
+.project_image.diag-split img:last-child {
+  clip-path: polygon(0 31.8%, 100% 68.2%, 100% 100%, 0 100%);
+  z-index: 1;
+}
+
+.project_image.diag-split img:hover {
+  transform: scale(1.05);
+}
+
+/* Fallback for browsers without clip-path support: show images side-by-side */
+@supports not (clip-path: polygon(0 0, 100% 0, 100% 100%)) {
+  .project_image.diag-split {
+    display: flex;
+  }
+  .project_image.diag-split img {
+    position: relative;
+    width: 50%;
+    height: auto;
   }
 }

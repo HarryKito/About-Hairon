@@ -63,7 +63,7 @@ footer, header, hgroup, menu, nav, section
 	--text-dark: #333333;
 	--card-bg: #ffffff; /* card background */
 	--text: #102027; /* readable dark text */
-	--muted: var(--ash-gray); /* softer muted color */
+	--muted: #6b6b6b; /* softer muted color (darkened for better contrast) */
 	/* Primary accent moved to sage to reduce pink dominance */
 	--accent: var(--sage-green);
 	--accent-rose: var(--dusty-rose); /* keep rose as secondary */
