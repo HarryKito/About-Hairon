@@ -1,28 +1,62 @@
 @charset "UTF-8";
 
+body {
+    background: #e5e5e5;
+    color: var(--text);
+    line-height: 1.6;
+    width: 100%;
+    margin: 0;
+    padding: 40px 0;
+}
+
+/* A4 page */
 .A4 {
     background-color: white;
     width: 210mm;
     height: 297mm;
+
+    margin: 30px auto;
+    padding: 40mm 25mm;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .intro {
-    text-align: center;
+    text-align: left;
     font-family: Arial, sans-serif;
-    font-size: 24px;
-    color: black;
 }
 
+.intro h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.title{
+    font-size:22px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.desc{
+    margin-top:8px;
+    font-size:16px;
+    color:#444;
+}
+
+/* For Print */
 @media print {
     body {
         background: none;
+        padding: 0;
     }
-    .container {
-        background-color: white;
-        margin: auto;
+
+    .A4 {
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
     }
 }
