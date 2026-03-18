@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@page {
+    size: A4;
+    margin: 0;
+}
 
 body {
     background: #e5e5e5;
@@ -7,6 +11,40 @@ body {
     width: 100%;
     margin: 0;
     padding: 40px 0;
+}
+
+/* Resume Header */
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.header-right {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.info {
+    font-size: 13px;
+    color: #333;
+    text-align: right;
+}
+
+.profile-image {
+    width: 35mm;
+    height: 45mm;
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* 비율 유지 */
 }
 
 /* A4 page */
@@ -21,8 +59,17 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    
+    /* Cut the page to show on the web browser */
+    page-break-after: always;
+    break-after: page;
 
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.A4:last-child {
+    page-break-after: auto;
+    break-after: auto;
 }
 
 .intro {
