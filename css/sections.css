@@ -54,28 +54,18 @@
 }
 
 .projects_grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 28px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding: 20px;
-}
-
-.projects_grid::-webkit-scrollbar {
-  height: 10px;
-}
-
-.projects_grid::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.08);
-  border-radius: 6px;
+  padding: 28px 20px;
+  overflow: visible;
 }
 
 .project_link {
   text-decoration: none;
   color: inherit;
-  flex: 0 0 320px;
-  scroll-snap-align: start;
+  display: block;
+  max-width: none;
 }
 
 .project_card {

@@ -47,6 +47,13 @@ body {
     object-fit: cover;    /* 비율 유지 */
 }
 
+.main-container {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;  /* 🔥 핵심 */
+    align-items: center;
+}
+
 /* A4 page */
 .A4 {
     background-color: white;
