@@ -56,8 +56,8 @@
 .projects_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-  padding: 28px 20px;
+  gap: 12px;
+  padding: 16px 12px;
   overflow: visible;
 }
 
@@ -383,8 +383,8 @@
 
   .projects_grid {
     grid-template-columns: 1fr;
-    padding: 0 8px; /* reduce horizontal padding for small screens */
-    gap: 16px;
+    padding: 8px; /* reduce horizontal padding for small screens */
+    gap: 12px;
   }
 
   .project_image {
